@@ -1,26 +1,27 @@
+
 mixin screen(mods)
 	-
 		const data = {
 			text1: "Загрузка",
 			text2: "Чтобы перенестись в дополненную реальность, разреши доступ к камере",
-			icon1: ""
+
 		}
 
 	section.screen(class="screen--" + mods)
-		img(src="img/content/snow.png", alt="Фоновые снежинки").screen__bg
+		img(src="img/content/snow.png" alt="Фоновые снежинки").screen__bg
 		.container 
 			if mods === "loader"
 				.loader-content
 					.loader__square
-						img(src="img/content/loader-bg.png", alt="Фоновый белый глянцевый квадрат со скругленными углами").loader__square-bg
-						img(src="img/content/icon-1.png", alt="Варежка").loader__square-icon.loader__square-icon--01.is-active
-						img(src="img/content/icon-2.png", alt="Ёлочные игрушки").loader__square-icon.loader__square-icon--02
-						img(src="img/content/icon-3.png", alt="Новогодний подарок").loader__square-icon.loader__square-icon--03
-						img(src="img/content/icon-4.png", alt="Колокольчик с бантиком").loader__square-icon.loader__square-icon--04
+						img(src="img/content/loader-bg.png" alt="Фоновый белый глянцевый квадрат со скругленными углами").loader__square-bg
+						img(src="img/content/icon-1.png" alt="Варежка").loader__square-icon.loader__square-icon--01.is-active
+						img(src="img/content/icon-2.png" alt="Ёлочные игрушки").loader__square-icon.loader__square-icon--02
+						img(src="img/content/icon-3.png" alt="Новогодний подарок").loader__square-icon.loader__square-icon--03
+						img(src="img/content/icon-4.png" alt="Колокольчик с бантиком").loader__square-icon.loader__square-icon--04
 					p.loader__text=data.text1
 			if mods === "ar-allow"
 				.loader-content
 					p.ar-allow__text=data.text2
 					.loader__square.loader__square--ar
-						img(src="img/content/loader-bg.png", alt="Фоновый белый глянцевый квадрат со скругленными углами").loader__square-bg
-						img(src="img/content/icon-camera.png", alt="Рисунок фотокамеры").loader__square-icon.loader__square-icon--cam
+						img(src="img/content/loader-bg.png" alt="Фоновый белый глянцевый квадрат со скругленными углами").loader__square-bg
+						img(src="img/content/icon-camera.png" alt="Рисунок фотокамеры").loader__square-icon.loader__square-icon--cam
